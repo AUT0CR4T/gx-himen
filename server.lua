@@ -29,6 +29,110 @@ RegisterNetEvent('gx-himen:server:MakeWeed', function()
     end
 end)
 
+RegisterNetEvent('gx-himen:server:BrewWhiskey', function()
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+    local whiskeyglass = Player.Functions.GetItemByName('whiskeyglass')
+    local water = Player.Functions.GetItemByName('water_bottle')
+    local yeast = Player.Functions.GetItemByName('yeast')
+
+    if whiskeyglass ~= nil and water ~= nil and yeast ~= nil then
+
+        Player.Functions.RemoveItem('whiskeyglass', 1)
+        Player.Functions.RemoveItem('water_bottle', 2)
+        Player.Functions.RemoveItem('yeast', 1)
+        Player.Functions.AddItem('whiskey', 1)
+        TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items["whiskey"], "add")
+    else
+        TriggerClientEvent('QBCore:Notify', src, 'You do not have the right items...', 'error')
+    end
+end)
+
+RegisterNetEvent('gx-himen:server:BrewBeer', function()
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+    local beerglass = Player.Functions.GetItemByName('beerglass')
+    local water = Player.Functions.GetItemByName('water_bottle')
+    local yeast = Player.Functions.GetItemByName('yeast')
+
+    if beerglass ~= nil and water ~= nil and yeast ~= nil then
+
+        Player.Functions.RemoveItem('beerglass', 1)
+        Player.Functions.RemoveItem('water_bottle', 1)
+        Player.Functions.RemoveItem('yeast', 2)
+        Player.Functions.AddItem('pint_beer', 1)
+        TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items["pint_beer"], "add")
+    else
+        TriggerClientEvent('QBCore:Notify', src, 'You do not have the right items...', 'error')
+    end
+end)
+
+RegisterNetEvent('gx-himen:server:BrewHulk', function()
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+    local cocktailglass = Player.Functions.GetItemByName('cocktailglass')
+    local water = Player.Functions.GetItemByName('water_bottle')
+    local yeast = Player.Functions.GetItemByName('yeast')
+    local weed = Player.Functions.GetItemByName('ground_weed')
+
+    if cocktailglass ~= nil and water ~= nil and yeast ~= nil and weed ~= nil then
+
+        Player.Functions.RemoveItem('cocktailglass', 1)
+        Player.Functions.RemoveItem('water_bottle', 1)
+        Player.Functions.RemoveItem('yeast', 1)
+        Player.Functions.RemoveItem('ground_weed', 1)
+        Player.Functions.AddItem('hulkcocktail', 1)
+        TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items["hulkcocktail"], "add")
+    else
+        TriggerClientEvent('QBCore:Notify', src, 'You do not have the right items...', 'error')
+    end
+end)
+
+RegisterNetEvent('gx-himen:server:BrewVodka', function()
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+    local potato = Player.Functions.GetItemByName('potato')
+    local water = Player.Functions.GetItemByName('water_bottle')
+    local yeast = Player.Functions.GetItemByName('yeast')
+    local sugar = Player.Functions.GetItemByName('sugar')
+
+    if potato ~= nil and water ~= nil and yeast ~= nil and sugar ~= nil then
+
+        Player.Functions.RemoveItem('potato', 1)
+        Player.Functions.RemoveItem('water_bottle', 1)
+        Player.Functions.RemoveItem('yeast', 1)
+        Player.Functions.RemoveItem('potato', 1)
+        Player.Functions.AddItem('vodka', 1)
+        TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items["vodka"], "add")
+    else
+        TriggerClientEvent('QBCore:Notify', src, 'You do not have the right items...', 'error')
+    end
+end)
+
+RegisterNetEvent('gx-himen:server:BrewBlueH', function()
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+    local cocktailglass = Player.Functions.GetItemByName('cocktailglass')
+    local water = Player.Functions.GetItemByName('water_bottle')
+    local sugar = Player.Functions.GetItemByName('sugar')
+    local rum = Player.Functions.GetItemByName('rum')
+    local vodka = Player.Functions.GetItemByName('vodka')
+
+
+    if cocktailglass ~= nil and water ~= nil and sugar ~= nil and rum ~= nil and vodka ~= nil then
+       
+        Player.Functions.RemoveItem('cocktailglass', 1)
+        Player.Functions.RemoveItem('water_bottle', 1)
+        Player.Functions.RemoveItem('vodka', 1)
+        Player.Functions.RemoveItem('sugar', 1)
+        Player.Functions.RemoveItem('rum', 1)
+        Player.Functions.AddItem('blue_hawaiian', 1)
+        TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items["blue_hawaiian"], "add")
+    else
+        TriggerClientEvent('QBCore:Notify', src, 'You do not have the right items...', 'error')
+    end
+end)
+
 --|Money
 RegisterNetEvent('gx-himen:server:Take1Dollars', function(data)
     local src = source
