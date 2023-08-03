@@ -55,70 +55,70 @@ RegisterNetEvent('gx-himen:client:ShopMenu', function()
             header = "Water",
             txt = "Price: 10x per 5$",
             params = {
-                event = "gx-:client:BuyWater",
+                event = "gx-himen:client:BuyWater",
             }
         },
         {
             header = "Pint Glass",
             txt = "Price: 10x per 10$",
             params = {
-                event = "gx-:client:BuyPintGlass",
+                event = "gx-himen:client:BuyPintGlass",
             }
         },
         {
             header = "Yeast",
             txt = "Price: 10x per 5$",
             params = {
-                event = "gx-:client:BuyYeast",
+                event = "gx-himen:client:BuyYeast",
             }
         },
         {
             header = "Beer Glass",
             txt = "Price: 10x per 10$",
             params = {
-                event = "gx-:client:BuyBeerGlass",
+                event = "gx-himen:client:BuyBeerGlass",
             }
         }, 
         {
             header = "Whiskey Glass",
             txt = "Price: 10x per 10$",
             params = {
-                event = "gx-:client:BuyWhiskeyGlass",
+                event = "gx-himen:client:BuyWhiskeyGlass",
             }
         },
         {
             header = "Sugar",
             txt = "Price: 10x per 5$",
             params = {
-                event = "gx-:client:BuySugar",
+                event = "gx-himen:client:BuySugar",
             }
         },
         {
             header = "Potato",
             txt = "Price: 10x per 5$",
             params = {
-                event = "gx-:client:BuyPotato",
+                event = "gx-himen:client:BuyPotato",
             }
         },
         {
             header = "Rum",
             txt = "Price: 10x per 10$",
             params = {
-                event = "gx-:client:BuyRum",
+                event = "gx-himen:client:BuyRum",
             }
         },
         {
             header = "Coke",
             txt = "Price: 10x per 10$",
             params = {
-                event = "gx-:client:BuyCoke",
+                event = "gx-himen:client:BuyCoke",
             }
         }, 
         {
             header = "Trimming Scissors",
             txt = "Price: 1x per 1$",
             params = {
-                event = "gx-:client:BuyTrimmers",
+                event = "gx-himen:client:BuyTrimmers",
             }
         },
     })
@@ -663,3 +663,4 @@ RegisterNetEvent("gx-himen:client:BillPlayer", function()
         TriggerServerEvent("gx-himen:server:BillPlayer", dialog.id, dialog.amount)
     end
 end)
+
