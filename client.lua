@@ -171,6 +171,72 @@ RegisterNetEvent('gx-himen:client:WeedMenu', function()
     })
 end)
 
+RegisterNetEvent('gx-himen:client:BrewWhiskey', function() 
+    TriggerEvent('animations:client:EmoteCommandStart', {"mechanic"})
+    QBCore.Functions.Progressbar('brewwhiskey', 'BREWING WHISKEY...', 5000, false, true, {
+        disableMovement = true,
+        disableCarMovement = true,
+        disableMouse = false,
+        disableCombat = true,
+    }, {}, {}, {}, function()
+        TriggerServerEvent('gx-himen:server:BrewWhiskey')
+        TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+    end)
+end)
+
+RegisterNetEvent('gx-himen:client:BrewBeer', function() 
+    TriggerEvent('animations:client:EmoteCommandStart', {"mechanic"})
+    QBCore.Functions.Progressbar('brewbeer', 'BREWING BEER...', 5000, false, true, {
+        disableMovement = true,
+        disableCarMovement = true,
+        disableMouse = false,
+        disableCombat = true,
+    }, {}, {}, {}, function()
+        TriggerServerEvent('gx-himen:server:BrewBeer')
+        TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+    end)
+end)
+
+RegisterNetEvent('gx-himen:client:BrewHulk', function() 
+    TriggerEvent('animations:client:EmoteCommandStart', {"mechanic"})
+    QBCore.Functions.Progressbar('brewhulk', 'BREWING HULK...', 5000, false, true, {
+        disableMovement = true,
+        disableCarMovement = true,
+        disableMouse = false,
+        disableCombat = true,
+    }, {}, {}, {}, function()
+        TriggerServerEvent('gx-himen:server:BrewHulk')
+        TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+    end)
+end)
+
+RegisterNetEvent('gx-himen:client:BrewVodka', function() 
+    TriggerEvent('animations:client:EmoteCommandStart', {"mechanic"})
+    QBCore.Functions.Progressbar('brewvodka', 'BREWING Vodka...', 5000, false, true, {
+        disableMovement = true,
+        disableCarMovement = true,
+        disableMouse = false,
+        disableCombat = true,
+    }, {}, {}, {}, function()
+        TriggerServerEvent('gx-himen:server:BrewVodka')
+        TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+    end)
+end)
+
+RegisterNetEvent('gx-himen:client:BrewBlueH', function() 
+    TriggerEvent('animations:client:EmoteCommandStart', {"mechanic"})
+    QBCore.Functions.Progressbar('brewblueh', 'BREWING BLUE H...', 5000, false, true, {
+        disableMovement = true,
+        disableCarMovement = true,
+        disableMouse = false,
+        disableCombat = true,
+    }, {}, {}, {}, function()
+        TriggerServerEvent('gx-himen:server:BrewBlueH')
+        TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+    end)
+end)
+
+
 RegisterNetEvent('gx-himen:client:DrinkMenu', function() 
     exports['qb-menu']:openMenu({
         {
