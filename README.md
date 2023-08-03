@@ -9,6 +9,7 @@ https://www.gta5-mods.com/maps/mlo-hi-men-bar-add-on-sp-fivem
 qb-core
 
 Add Items To shared/items.lua
+
 Add Job To Shared/jobs.lua
 
 # Join The Discord
