@@ -4,7 +4,7 @@ game 'gta5'
 
 author 'GX Scripts (Galaxyy)'
 
-description 'gx-himen'
+description 'gx-weedshop'
 
 version '1.0'
 

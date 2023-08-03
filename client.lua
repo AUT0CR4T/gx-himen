@@ -66,6 +66,13 @@ RegisterNetEvent('gx-himen:client:ShopMenu', function()
             }
         },
         {
+            header = "Cocktail Glass",
+            txt = "Price: 10x per 10$",
+            params = {
+                event = "gx-himen:client:BuyCocktailGlass",
+            }
+        },
+        {
             header = "Yeast",
             txt = "Price: 10x per 5$",
             params = {
@@ -266,21 +273,21 @@ RegisterNetEvent('gx-himen:client:DrinkMenu', function()
         },
         {
             header = "Hulk Cocktail",
-            txt = "Requirements: <br> - 1 Weed <br> - 1 Water <br> - 1 Yeast",
+            txt = "Requirements: <br> - 1 Cocktail Glass <br> - 1 Weed <br> - 1 Water <br> - 1 Yeast",
             params = {
                 event = "gx-himen:client:BrewHulk",
             }
         },
         {
             header = "Vodka",
-            txt = "Requirements: <br> - 1 Water <br> - 1 Sugar <br> - 1 Yeast <br>, 1 Potato",
+            txt = "Requirements: <br> - 1 Water <br> - 1 Sugar <br> - 1 Yeast <br> - 1 Potato",
             params = {
                 event = "gx-himen:client:BrewVodka",
             }
         },
         {
             header = "Blue Hawaiian",
-            txt = "Requirements: <br> - 1 Vodka <br> - 1 Sugar <br>, 1 Water <br>, 1 Rum",
+            txt = "Requirements: <br> - 1 Cocktail Glass <br> - 1 Vodka <br> - 1 Sugar <br> - 1 Water <br> - 1 Rum",
             params = {
                 event = "gx-himen:client:BrewBlueH",
             }
@@ -496,6 +503,20 @@ RegisterNetEvent('gx-himen:client:BuyPintGlass', function()
     }, {}, {}, {}, function()
         TriggerEvent('animations:client:EmoteCommandStart', {"c"})
         TriggerServerEvent('gx-himen:Server:AddItem', "pintglass", 10)
+        TriggerServerEvent('gx-himen:server:Take10Dollars')
+    end)
+end)
+
+RegisterNetEvent('gx-himen:client:BuyCocktailGlass', function()
+    TriggerEvent('animations:client:EmoteCommandStart', {"handshake"})
+    QBCore.Functions.Progressbar('buy_cocktail', 'PAYING...', 2000, false, true, {
+        disableMovement = true,
+        disableCarMovement = true,
+        disableMouse = false,
+        disableCombat = true,
+    }, {}, {}, {}, function()
+        TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+        TriggerServerEvent('gx-himen:Server:AddItem', "cocktailglass", 10)
         TriggerServerEvent('gx-himen:server:Take10Dollars')
     end)
 end)
@@ -729,4 +750,3 @@ RegisterNetEvent("gx-himen:client:BillPlayer", function()
         TriggerServerEvent("gx-himen:server:BillPlayer", dialog.id, dialog.amount)
     end
 end)
-
