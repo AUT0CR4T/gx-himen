@@ -6,6 +6,7 @@ Preview Coming Soon
 
 # Dependencies
 https://www.gta5-mods.com/maps/mlo-hi-men-bar-add-on-sp-fivem
+
 qb-core
 
 Add Items To shared/items.lua
