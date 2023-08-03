@@ -4,7 +4,7 @@ gx-himen is a bar script that uses the Himen MLO In south los santos With its ow
 # Preview
 Preview Coming Soon
 
-#Dependencies
+# Dependencies
 https://www.gta5-mods.com/maps/mlo-hi-men-bar-add-on-sp-fivem
 qb-core
 Add Items To shared/items.lua
